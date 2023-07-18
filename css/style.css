@@ -26,7 +26,6 @@ button {
   margin: 0;
 }
 
-
 body {
   overflow-x: hidden;
   margin: 0;
@@ -38,7 +37,6 @@ body {
 
 .header {
   background-color: #B36050;
-  ;
 }
 
 .container {
@@ -148,14 +146,14 @@ body {
   border: none;
   display: block;
   margin: 0 auto;
-
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Section Ready */
 
 .ready {
   background: #A9AE8D;
-  ;
   padding-left: 70px;
   min-height: 304px;
 }
@@ -245,7 +243,6 @@ body {
   background-position: center;
 }
 
-
 .feel__wrapper {
   display: flex;
   background: #DF9B7A;
@@ -276,11 +273,9 @@ body {
   padding-left: 73px;
   background: #F1D3B9;
   min-height: 1069px;
- margin: 0 auto;
+  margin: 0 auto;
   padding-top: 61px;
   width: 100%;
-  
- 
 }
 
 .meet__wrapper {
@@ -299,18 +294,14 @@ body {
   left: -50px;
   padding: 50px;
   background: #F8F8F8;
- margin-top: 32px;
-
-
+  margin-top: 32px;
 }
 
 .meet__box h3 {
-  
   color: #B45F4D;
   font-size: 30px;
   line-height: 57.6px;
   text-align: center;
-  
   padding-bottom: 22px;
 }
 
@@ -321,9 +312,6 @@ body {
   margin: 0 auto;
   max-width: 416px;
   margin-bottom: 41px;
-
-
-  
 }
 
 .meet__box a {
@@ -333,8 +321,95 @@ body {
   line-height: 25.6px;
 }
 
+/* Section Follow */
+
+.follow {
+  margin-bottom: 32px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.follow h2 {
+  padding-top: 25px;
+  margin-bottom: 49px;
+  color: #000;
+  text-align: center;
+  font-size: 23px;
+  line-height: 39.2px;
+  text-transform: capitalize;
+}
+
+.follow__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 5px;
+}
+
+/* Footer */
+
+.footer {
+  background: #F6F4EC;
+padding: 71px 50px 56px 60px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.footer__item-left {
+  list-style: none;
+}
+
+.footer__item-left li {
+margin-bottom: 5px;
+}
+
+.footer__item-left li:last-child {
+  margin-bottom: 0;
+}
+.footer__item-left a {
+  color: #B45F4D;
+  font-size: 14px;
+  line-height: 19.6px;
+  text-decoration: none;
+}
+
+.footer__item-right h5 {
+  color: #C17C6C;
+  font-size: 14px;
+  line-height: 22.4px;
+  margin-bottom: 5px;
+}
+
+.footer__item-right p {
+  color: #C17C6C;
+  font-size: 14px;
+  line-height: 22.4px;
+  margin-bottom: 5px;
+}
+
+.footer__item-right p:last-child {
+  margin-bottom: 0;
+}
+
+.footer__all-rights {
+  color: #C17C6C;
+  font-size: 14px;
+  line-height: 22.4px;
+}
 
 /* @Media */
+
+@media screen and (max-width: 1420px) {
+  .follow__grid {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 20px;
+  }
+}
 
 @media screen and (max-width: 1279px) {
   .pick__wrapper {
@@ -344,18 +419,19 @@ body {
 
 @media screen and (max-width: 1074px) {
   .meet__wrapper {
-    flex-direction: column-reverse; 
+    flex-direction: column-reverse;
   }
 
   .meet {
     padding-left: 0;
+    padding-bottom: 50px;
   }
 
   .meet__box {
     position: static;
     margin-bottom: 10px;
   }
-} 
+}
 
 @media screen and (max-width: 1030px) {
   .nav__wrapper {
@@ -391,24 +467,43 @@ body {
   .feel__wrapper a {
     font-size: 12px;
   }
+}
 
+@media screen and (max-width: 776px) {
+  .follow__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media screen and (max-width: 640px) {
+.footer__wrapper {
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.footer__item-left {
+  margin-bottom: 25px;
+}
 }
 
 @media screen and (max-width: 678px) {
-.meet__wrapper img {
-  width: 250px;
-  height: 400px;
-}
+  .meet__wrapper img {
+    width: 250px;
+    height: 400px;
+  }
 
-.meet__box {
-padding: 10px;
-}
+  .meet__box {
+    padding: 10px;
+  }
 
-.meet__box p {
-  font-size: 13px;
-  max-width: 230px;
-}
+  .meet__box p {
+    font-size: 13px;
+    max-width: 230px;
+  }
+
+  .ready {
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 584px) {
@@ -425,12 +520,18 @@ padding: 10px;
   }
 }
 
+@media screen and (max-width: 514px) {
+  .follow__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 @media screen and (max-width: 459px) {
   .pick__item img {
     width: 220px;
     height: 270px;
   }
-
+}
 
   @media screen and (max-width: 396px) {
     .nav__list li:nth-child(1) {
